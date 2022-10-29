@@ -2,15 +2,19 @@ package br.com.ada.petshop.modelo;
 
 public class Cachorro {
 
+    // atributos, o que um classe tem
     private String nome;
     private String raca;
 
     private int idade;
-
-    private static int contador;
-
     private boolean estaDoente;
 
+    /* atributo estatico, que pertence somente a classe
+    havera somente uma instancia, compartilhada entre os objetos
+     */
+    private static int contador;
+
+    // construtores, que podem ser usados para a criação de objetos
     public Cachorro(){
         contador++;
     }
@@ -27,9 +31,9 @@ public class Cachorro {
     }
 
 
+    // metodos, o que uma classe faz...
 
     // metodos de configuração - setam os valores - setters dos atributos
-
 
     public void setEstaDoente(boolean estaDoente) {
         this.estaDoente = estaDoente;
@@ -43,6 +47,7 @@ public class Cachorro {
         this.raca = raca;
     }
 
+    // encapsulando regra de negócio no setter
     public void setIdade(int idade) {
         if(idade < 0){
             System.err.println("Cachorro não pode ter idade negativa");
@@ -53,9 +58,7 @@ public class Cachorro {
         }
     }
 
-
     // metodos de consulta - consultam os valores dos atributos
-
 
     public boolean isEstaDoente() {
         return estaDoente;
@@ -78,6 +81,7 @@ public class Cachorro {
     }
 
 
+    // metodo usado para imprimir mais informações (estado) sobre os valores dos atributos do objeto
     @Override
     public String toString() {
         return "Cachorro{" +
@@ -85,6 +89,7 @@ public class Cachorro {
                 ", raca='" + raca + '\'' +
                 ", idade=" + idade +
                 ", estaDoente=" + estaDoente +
+                ", contador=" + contador +
                 '}';
     }
 }
