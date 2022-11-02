@@ -1,7 +1,10 @@
 package br.com.ada.petshop.teste;
 
+import br.com.ada.petshop.businessobject.CachorroRepository;
 import br.com.ada.petshop.businessobject.Internacoes;
 import br.com.ada.petshop.modelo.Cachorro;
+import br.com.ada.petshop.modelo.Dono;
+import br.com.ada.petshop.modelo.Endereco;
 
 public class TestPetShop {
 
@@ -10,45 +13,29 @@ public class TestPetShop {
         esse endereço é atributo a variavel
         estamos usando varios construtores para isso*/
 
-        Cachorro cachorro = new Cachorro("Doguinho");
+        Endereco endereco1 = new Endereco("pastor gabino brelaz", "1401", "59082-010", "capim macio", "RN");
+        Endereco endereco2 = new Endereco("das orquídeas", "82", "59082-012", "mirassol", "RN");
+        Endereco endereco3 = new Endereco("roberto freire", "2050", "59082-014", "capim macio", "RN");
 
-        Cachorro cachorro0 = new Cachorro("Doguinho 2", 15);
+        Dono dono1 = new Dono("eulalia", "05192642159", "eulaliaribeiro@hotmail.com", endereco1);
+        Dono dono2 = new Dono("renan", "11111111111", "renanribeiro@hotmail.com", endereco2);
+        Dono dono3 = new Dono("francisca", "22222222222", "euzibeneribeiro@hotmail.com", endereco3);
 
-        Cachorro cachorro1 = new Cachorro();
-        cachorro1.setNome("Cacau");
-        cachorro1.setRaca("Vira lata caramelo");
-        cachorro1.setIdade(1);
+        Cachorro cachorro1 = new Cachorro("marley", "labrador", 6, true, dono1);
+        Cachorro cachorro2 = new Cachorro("zidane", "SRD", 10, true, dono2);
+        Cachorro cachorro3 = new Cachorro("fred", "fox paulista", 2, false, dono3);
 
-        System.out.println("Idade do " + cachorro1.getNome()+ " e " + cachorro1.getIdade());
+//        System.out.println(cachorro1);
+//        System.out.println(cachorro2);
+//        System.out.println(cachorro3);
 
-        Cachorro cachorro2 = new Cachorro();
-        cachorro2.setNome("Spike");
-        cachorro2.setRaca("PitBull");
-        cachorro2.setIdade(15);
-        cachorro2.setEstaDoente(true);
+        CachorroRepository cachorroRepository = new CachorroRepository();
+        cachorroRepository.cadastra(cachorro1);
+        cachorroRepository.cadastra(cachorro2);
+        cachorroRepository.cadastra(cachorro3);
 
-        Cachorro cachorro3 = new Cachorro();
-        cachorro3.setNome("Bob");
-        cachorro3.setRaca("Pastor Alemao");
-        cachorro3.setIdade(10);
-        cachorro3.setEstaDoente(true);
+        cachorroRepository.imprimirCachorrosCadastrados();
 
-        System.out.println("Idade do " + cachorro2.getNome()+ " e " + cachorro2.getIdade());
-
-        System.out.println("-----------------IMPRIMINDO OS DOGS--------------------");
-
-        // chama o toString ao realizar a impressão
-        System.out.println(cachorro);
-        System.out.println(cachorro0);
-        System.out.println(cachorro1);
-        System.out.println(cachorro2);
-        System.out.println(cachorro3);
-
-        Internacoes internacoes  = new Internacoes();
-        internacoes.internar(cachorro2);
-        internacoes.internar(cachorro3);
-
-        internacoes.mostraCachorrosInternados();
 
     }
 

@@ -5,31 +5,33 @@ public class Cachorro {
     // atributos, o que um classe tem
     private String nome;
     private String raca;
-
     private int idade;
     private boolean estaDoente;
+    private Dono dono;
+    private int id;
+    static int counter = 1;
+
+    public Cachorro(String nome, String raca, int idade, boolean estaDoente, Dono dono) {
+        this.nome = nome;
+        this.raca = raca;
+        this.idade = idade;
+        this.estaDoente = estaDoente;
+        this.dono = dono;
+        this.id = counter++;
+    }
+
+    public Dono getDono() {
+        return dono;
+    }
+    public void setDono(Dono dono) {
+        this.dono = dono;
+    }
 
     /* atributo estatico, que pertence somente a classe
-    havera somente uma instancia, compartilhada entre os objetos
-     */
-    private static int contador;
+        havera somente uma instancia, compartilhada entre os objetos
+    */
 
     // construtores, que podem ser usados para a criação de objetos
-    public Cachorro(){
-        contador++;
-    }
-
-    public Cachorro(String nome){
-        contador++;
-        this.nome = nome;
-    }
-
-    public Cachorro(String nome, int idade){
-        contador++;
-        this.nome = nome;
-        setIdade(idade);
-    }
-
 
     // metodos, o que uma classe faz...
 
@@ -64,10 +66,6 @@ public class Cachorro {
         return estaDoente;
     }
 
-    public static int getContador() {
-        return contador;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -81,7 +79,6 @@ public class Cachorro {
     }
 
 
-    // metodo usado para imprimir mais informações (estado) sobre os valores dos atributos do objeto
     @Override
     public String toString() {
         return "Cachorro{" +
@@ -89,7 +86,8 @@ public class Cachorro {
                 ", raca='" + raca + '\'' +
                 ", idade=" + idade +
                 ", estaDoente=" + estaDoente +
-                ", contador=" + contador +
+                ", dono=" + dono +
+                ", id=" + id +
                 '}';
     }
 }

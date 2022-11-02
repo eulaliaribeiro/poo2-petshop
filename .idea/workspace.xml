@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="082d02f8-0396-43ae-96ff-03f9fba1c0eb" name="Changes" comment="codigo inicial do petshop">
+    <list default="true" id="082d02f8-0396-43ae-96ff-03f9fba1c0eb" name="Changes" comment="criação das classes Dono, Endereco e CachorroRepository e seus respectivos métodos">
+      <change afterPath="$PROJECT_DIR$/src/br/com/ada/petshop/businessobject/CachorroRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/ada/petshop/modelo/Dono.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/ada/petshop/modelo/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/ada/petshop/businessobject/Internacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/ada/petshop/businessobject/Internacoes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/ada/petshop/modelo/Cachorro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/ada/petshop/modelo/Cachorro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/ada/petshop/teste/TestPetShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/ada/petshop/teste/TestPetShop.java" afterDir="false" />
     </list>
@@ -36,18 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eulal/Documents/DEV/JAVA/poo2/ProjetoOO2Turma909&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TestPetShop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.ada.petshop.teste.TestPetShop" />
@@ -77,6 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1666996017687</updated>
       <workItem from="1666996021819" duration="10332000" />
+      <workItem from="1667256238780" duration="8213000" />
+      <workItem from="1667427968908" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="codigo inicial do petshop">
       <created>1667006927797</created>
@@ -104,7 +110,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codigo inicial do petshop" />
-    <option name="LAST_COMMIT_MESSAGE" value="codigo inicial do petshop" />
+    <MESSAGE value="criação das classes Dono, Endereco e CachorroRepository e seus respectivos métodos" />
+    <option name="LAST_COMMIT_MESSAGE" value="criação das classes Dono, Endereco e CachorroRepository e seus respectivos métodos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -113,11 +120,6 @@
           <url>file://$PROJECT_DIR$/src/br/com/ada/petshop/businessobject/Internacoes.java</url>
           <line>11</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/br/com/ada/petshop/teste/TestPetShop.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
